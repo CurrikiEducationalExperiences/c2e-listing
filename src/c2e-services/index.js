@@ -15,7 +15,7 @@ const C2eServices = () => {
   const [openAccordion, setOpenAccordion] = useState(null)
   const [filteredData, setFilteredData] = useState([])
 
-  const host = "."
+  const host = "https://c2e-services.curriki.org"
 
   const handleAccordionToggle = (eventKey) => {
     setOpenAccordion(openAccordion === eventKey ? null : eventKey)

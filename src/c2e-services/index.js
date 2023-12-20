@@ -177,7 +177,11 @@ const C2eServices = () => {
                                     &nbsp;: {data.totallicenses}
                                   </small>
                                 </div>
-                                <button type="button" className="remove-btn" onClick={() => deleteList(data.ceelisting_id)}>
+                                <button
+                                  type="button"
+                                  className="remove-btn"
+                                  onClick={() => deleteList(data.ceelisting_id)}
+                                >
                                   <img src={crossIcon} alt="arrowIcon" />
                                   Remove Listing
                                 </button>
@@ -223,7 +227,11 @@ const C2eServices = () => {
                     &nbsp;: {data.ceelisting_id}
                   </small>
                 </div>
-                <button type="button" className="remove-btn" onClick={() => deleteList(data.ceelisting_id)}>
+                <button
+                  type="button"
+                  className="remove-btn"
+                  onClick={() => deleteList(data.ceelisting_id)}
+                >
                   <img src={crossIcon} alt="arrowIcon" />
                   Remove Listing
                 </button>

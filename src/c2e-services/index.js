@@ -15,7 +15,7 @@ const C2eServices = () => {
   const [openAccordion, setOpenAccordion] = useState(null)
   const [filteredData, setFilteredData] = useState([])
 
-  const host = "https://c2e-services.curriki.org"
+  const apiUrl = process.env.REACT_APP_BASE_URL;
 
   const handleAccordionToggle = (eventKey) => {
     setOpenAccordion(openAccordion === eventKey ? null : eventKey)
@@ -32,7 +32,7 @@ const C2eServices = () => {
       )
 
       if (ok) {
-        await axios.delete(host + `/c2e-listings/${ceelisting_id}`)
+        await axios.delete(apiUrl + `/c2e-listings/${ceelisting_id}`)
         window.alert("Listing deleted successfully!")
         initLoadC2eMedia()
       }
@@ -44,7 +44,7 @@ const C2eServices = () => {
 
   const initLoadC2eMedia = async () => {
     try {
-      const response = await axios.get(host + "/c2e-listings/manage")
+      const response = await axios.get(apiUrl + "/c2e-listings/manage")
       const data = response.data
 
       setLicensedData(data)
